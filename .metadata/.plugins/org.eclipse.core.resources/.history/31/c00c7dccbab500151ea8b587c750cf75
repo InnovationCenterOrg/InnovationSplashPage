@@ -1,0 +1,5 @@
+package com.ibm.innovationsplashpage.manager;
+
+public class AuthenticationManager {
+
+}

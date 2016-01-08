@@ -1,0 +1,5 @@
+package com.ibm.innovationsplashpage.action;
+
+public class LoginAction {
+
+}
