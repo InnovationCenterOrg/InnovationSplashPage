@@ -80,6 +80,12 @@ public class MainMenu extends HttpServlet {
 		Infor.setMED_FB_EMAIL(fbProfileData.get("email"));
 //set gender
 		Infor.setMED_FB_GENDER(fbProfileData.get("gender"));
+//set age range min
+		if(fbProfileData.get("age_range_min") != null)
+			Infor.setMED_FB_AGE_RANGE_MIN(Integer.parseInt(fbProfileData.get("age_range_min")));
+//set age range min
+		if(fbProfileData.get("age_range_max") != null)
+			Infor.setMED_FB_AGE_RANGE_MAX(Integer.parseInt(fbProfileData.get("age_range_max")));
 //Display Servlet
 		ServletOutputStream out = res.getOutputStream();
 		out.println("<h1><center>Facebook Login</center></h1>");
@@ -88,7 +94,8 @@ public class MainMenu extends HttpServlet {
 		out.println("<div><center><b>Facebook ID : </b>"+ Infor.getMED_FB_ID());
 		out.println("<div><center><b>Facebook Login :</b> "+ Infor.getMED_FB_NAME());
 		out.println("<div><center><b>Email :</b> "+ Infor.getMED_FB_EMAIL());
-//		out.println("<div><center>Age : "+ fbProfileData.get("age_range"));
+		out.println("<div><center><b>Age Range Min :</b> "+ Infor.getMED_FB_AGE_RANGE_MIN());
+		out.println("<div><center><b>Age Range Max :</b> "+ Infor.getMED_FB_AGE_RANGE_MAX());
 		out.println("<div><center><b>Gender :</b> "+ Infor.getMED_FB_GENDER());
 		
 		out.println("<h2><center>Device Information</center></h2>");

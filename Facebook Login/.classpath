@@ -7,14 +7,19 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="/Users/pannrays/Desktop/Facebook Login/restfb-1.18.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/pannrays/Desktop/Facebook Login/annotations-api.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/pannrays/Desktop/Facebook Login/jdbc-2.0.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.server.core.container/com.ibm.ws.st.core.runtimeClasspathProvider/WebSphere Application Server Liberty Profile">
+		<attributes>
+			<attribute name="owner.project.facets" value="#system#;jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/annotations-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/java-json.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/jdbc-2.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 8 [1.8.0_60]">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.ibm.ws.st.core.runtimeClasspathProvider/WebSphere Application Server Liberty Profile"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/restfb-1.18.1 2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

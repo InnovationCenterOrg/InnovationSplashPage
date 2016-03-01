@@ -61,13 +61,17 @@ public class FBGraph {
 //				fbProfile.remove("gender");
 				fbProfile.put("gender", json.getString("gender"));
 			}
-			if (json.has("age_rang")){
-//				fbProfile.remove("age_rage");
-				fbProfile.put("age_range", json.getString("age_range"));
+			if (json.has("age_range")){ 
+				
+				if (json.getJSONObject("age_range").has("min")){
+					fbProfile.put("age_range_min",  String.valueOf(json.getJSONObject("age_range").getInt("min")));
+					System.out.println("age range min" + json.getJSONObject("age_range").getInt("min"));
+				}else if (json.getJSONObject("age_range").has("max")){
+					fbProfile.put("age_range_max",  String.valueOf(json.getJSONObject("age_range").getInt("max")));
+					System.out.println("age range max" + json.getJSONObject("age_range").getInt("max"));
+				}
 			}
-			if (json.has("{min}")){
-				fbProfile.put("min", json.getString("min"));
-			}
+			
 			if (json.has("node_id")){
 				fbProfile.put("node_id", json.getString("node_id"));
 			}
