@@ -94,8 +94,8 @@ public class MainMenu extends HttpServlet {
 		out.println("<div><center><b>Facebook ID : </b>"+ Infor.getMED_FB_ID());
 		out.println("<div><center><b>Facebook Login :</b> "+ Infor.getMED_FB_NAME());
 		out.println("<div><center><b>Email :</b> "+ Infor.getMED_FB_EMAIL());
-		out.println("<div><center><b>Age Range Min :</b> "+ Infor.getMED_FB_AGE_RANGE_MIN());
-		out.println("<div><center><b>Age Range Max :</b> "+ Infor.getMED_FB_AGE_RANGE_MAX());
+		out.println("<div><center><b>Age Range Min :</b> "+ (Infor.getMED_FB_AGE_RANGE_MIN() == 0 ? "-" : Infor.getMED_FB_AGE_RANGE_MIN()));
+		out.println("<div><center><b>Age Range Max :</b> "+ (Infor.getMED_FB_AGE_RANGE_MAX() == 0 ? "-" : Infor.getMED_FB_AGE_RANGE_MAX()));
 		out.println("<div><center><b>Gender :</b> "+ Infor.getMED_FB_GENDER());
 		
 		out.println("<h2><center>Device Information</center></h2>");
