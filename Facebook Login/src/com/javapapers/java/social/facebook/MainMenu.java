@@ -32,13 +32,13 @@ public class MainMenu extends HttpServlet {
 	MED_Model Infor = new MED_Model();
 	
 	
-	public void service(HttpServletRequest req, HttpServletResponse res)
+	public void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {		
 		
 		System.out.println("===Function MainMenu===");
 		
 		String code = null;
-		code = req.getParameter("code");
+		code = request.getParameter("code");
 		if (code == null || code.equals("")) {
 			throw new RuntimeException(
 					"ERROR: Didn't get code parameter in callback.");
@@ -49,13 +49,13 @@ public class MainMenu extends HttpServlet {
 		
 		
 //==set User Agent
-		   Infor.setMED_USER_AGENT(req.getHeader("User-Agent"));
+		   Infor.setMED_USER_AGENT(request.getHeader("User-Agent"));
 //==set Device
-		   Infor.setMED_OS(FindDevice(req.getHeader("User-Agent")));
+		   Infor.setMED_OS(FindDevice(request.getHeader("User-Agent")));
 
 ////==Get Information Meraki Devices
 
-		  HttpSession session = req.getSession(true);
+		  HttpSession session = request.getSession(true);
 		  System.out.println("CLIENT IP : "+session.getAttribute("client_ip"));
 		  
 		  Infor.setMED_CLIENT_IP((String)session.getAttribute("client_ip"));
@@ -87,7 +87,10 @@ public class MainMenu extends HttpServlet {
 		if(fbProfileData.get("age_range_max") != null)
 			Infor.setMED_FB_AGE_RANGE_MAX(Integer.parseInt(fbProfileData.get("age_range_max")));
 //Display Servlet
-		ServletOutputStream out = res.getOutputStream();
+	//	ServletOutputStream out = res.getOutputStream();
+		//out.println("<h1><center>Login Successfully</center></h1>");
+	//	out.println("<div><center>Enjoy your Free wifi at IBM Innovation Center.</center></div>");
+		/*
 		out.println("<h1><center>Facebook Login</center></h1>");
 		out.println("<h1><center>Success</center></h1>");
 		out.println("<h2><center>Information Facebook</center></h2>");
@@ -109,6 +112,11 @@ public class MainMenu extends HttpServlet {
 		out.println("<div><center><br><a href=https://n25.network-auth.com/splash/grant?continue_url=http://www.google.com&duration=3600><button type='button' style='background-color: #e6e6e6; width: 50%; height: 6%; font-size: x-large;'>Connecting to the Internet</button></a></center>");
 		out.println("<div></div>");
 		
+		*/
+		//out.println("<div><center><br><a href=https://n25.network-auth.com/splash/grant?continue_url=http://www.google.com&duration=3600><button type='button' style='background-color: #e6e6e6; width: 50%; height: 6%; font-size: x-large;'>Connecting to the Internet</button></a></center>");
+		String forwardUrl = "summary.jsp";
+
+		request.getRequestDispatcher(forwardUrl).forward(request, response);
 		InsetInformtoDB();				
 
 	}

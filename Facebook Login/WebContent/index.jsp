@@ -34,36 +34,32 @@ session.setAttribute("client_mac", client_mac);
 <title>Authentication With Facebook</title>
 </head>
 <body>
-	<div class="container">
+<center style="padding-left:0;" >
+	<div class="container" style="padding: 2em 0;">
 		<div class="row">
-			<div class="span12 text-center">
+			<div class="span12">
 				<p></p>
-				<h2>IBM Innovation</h2>
-				<h2>Center WIFI</h2>
+				<h2><b>IBM INNOVATION CENTER WIFI</b></h2>
 				<p></p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="span12 text-center">
+			<div class="span12">
 				<form method="post" action="testAction" class="form-signin">
 					<button class="button" type="submit">Login with Facebook</button>
 				</form>
 			</div>
 		</div>
-		
-	<div class="row" style="background-color: #F1EEEE;">
-		<div class="span12 text-center">
-			<p></p>
-			<font color="gray">POWERED BY</font>
-			<p></p>
-		</div>
-		<div class="span12 text-center">
-			<img src="./img/cisco-meraki-ibm-gray.png" alt="Cisco meraki IBM">
-			<p></p>
-		</div>
-		
+		<div><br></div>
+
 	</div>
-</div>
+			<div class="row" >
+			<div class="footer" style="position:absolute; width:100%; left:0px; bottom:0px;">
+				<div><font size="2" color="gray" >POWERED BY</font></div>
+				<div><img alt="Cisco Meraki" src="./img/cisco-meraki-ibm-gray.png" width="145" /></div>
+			</div>
+		</div>
+</center>
 <script src="js/bootstrap.min.js"></script>
 
 </body>

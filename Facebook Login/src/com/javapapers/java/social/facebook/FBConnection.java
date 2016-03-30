@@ -22,7 +22,7 @@ public class FBConnection extends HttpServlet {
 	//public static final String FB_APP_SECRET = "ad72240ff0f61554766ddce196b94e03";
 	public static final String FB_APP_ID = "1668985786720380";
 	public static final String FB_APP_SECRET = "e1749c56c7295811146a4897c8342a33";
-	public static final String REDIRECT_URI = "https://innovationsplashpage.eu-gb.mybluemix.net/Facebook_Login/fbhome";
+	public static final String REDIRECT_URI = "https://innovationsplashpage.eu-gb.mybluemix.net/fbhome";
 
 	public static final Logger log = Logger.getLogger(FBConnection.class.getName());
 	
